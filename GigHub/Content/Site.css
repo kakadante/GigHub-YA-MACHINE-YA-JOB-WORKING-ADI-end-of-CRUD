@@ -204,3 +204,14 @@ span.field-validation-error {
     .gigs > li .details .genre {
         font-size: 14px;
     }
+
+
+.gigs >li .actions {    /*in MINE.CSHTM - the DIV ACTION wont display but only on hover*/
+    font-size: 15px;
+    display: none;
+}
+
+
+.gigs > li:hover .actions {     /*in MINE.CSHTM - the DIV ACTION wont display but only on hover*/
+    display: block;
+}

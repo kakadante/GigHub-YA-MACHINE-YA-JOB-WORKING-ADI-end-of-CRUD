@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Dynamic;
 using System.Linq;
 using System.Web;
 
@@ -9,6 +10,9 @@ namespace GigHub.ViewModels
 {
     public class GigFormViewModel
     {
+
+        public int Id { get; set; } /*we created this property for the ACTION property below to know if we are adding or updating a gig*/
+
         [Required]
         public string Venue { get; set; }
 
@@ -24,6 +28,16 @@ namespace GigHub.ViewModels
         public byte Genre { get; set; }
 
         public IEnumerable<Genre> Genres { get; set; }
+
+        public string Heading { get; set; }
+
+        public string Action
+        {
+            get
+            {
+                return (Id != 0) ? "Update" : "Create";
+            }
+        }
 
         public DateTime GetDateTime()
         {
