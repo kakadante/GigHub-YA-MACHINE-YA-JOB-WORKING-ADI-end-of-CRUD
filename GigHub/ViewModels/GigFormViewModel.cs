@@ -11,7 +11,9 @@ namespace GigHub.ViewModels
     public class GigFormViewModel
     {
 
-        public int Id { get; set; } /*we created this property for the ACTION property below to know if we are adding or updating a gig*/
+        public int Id { get; set; } /*we created this property for the ACTION property below to know if we are CREATING or UPDATING a gig*/
+                                    //Io public string  Action chini kabisa kwa ii Model--zoom pia @using (Html.BeginForm(Model.Action, "Gigs")) kwa GigForm
+
 
         [Required]
         public string Venue { get; set; }
